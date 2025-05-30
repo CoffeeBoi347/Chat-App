@@ -4,7 +4,9 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance;
     public List<GameObject> panels = new List<GameObject>();
+    public string playerName;
 
     [Header("Buttons")]
 
@@ -13,9 +15,23 @@ public class GameManager : MonoBehaviour
     public Button viewProfileButton;
     public Button quitButton;
 
+    private void Awake()
+    {
+        if(instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+        DontDestroyOnLoad(this.gameObject);
+    }
+
     private void Start()
     {
-        OpenMenu(0);
+        OpenMenu(1);
         homeButton.onClick.AddListener(OpenHomeButton);
         postButton.onClick.AddListener(OpenPostButton);
         viewProfileButton.onClick.AddListener(OpenViewProfileButton);
