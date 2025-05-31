@@ -10,11 +10,13 @@ public class GameManager : MonoBehaviour
 
     [Header("Buttons")]
 
+    public GameObject headerObj;
     public Button homeButton;
     public Button postButton;
     public Button viewProfileButton;
+    public Button musicButton;
     public Button quitButton;
-
+    public Button deleteDataButton;
     private void Awake()
     {
         if(instance == null)
@@ -31,11 +33,23 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        OpenMenu(1);
+        if (!PlayerPrefs.HasKey("PlayerName"))
+        {
+            OpenMenu(6);
+        }
+
+        else
+        {
+            OpenMenu(1);
+            headerObj.gameObject.SetActive(true);
+        }
+
         homeButton.onClick.AddListener(OpenHomeButton);
         postButton.onClick.AddListener(OpenPostButton);
         viewProfileButton.onClick.AddListener(OpenViewProfileButton);
         quitButton.onClick.AddListener(OnApplicationQuit);
+        musicButton.onClick.AddListener(OpenMusicButton);
+        deleteDataButton.onClick.AddListener(OnDeleteData);
     }
 
     public void OpenMenu(int index)
@@ -71,8 +85,18 @@ public class GameManager : MonoBehaviour
         OpenMenu(2);
     }
 
+    public void OpenMusicButton()
+    {
+        OpenMenu(5);
+    }
+
     public void OnApplicationQuit()
     {
         Application.Quit();
+    }
+
+    public void OnDeleteData()
+    {
+        PlayerPrefs.DeleteAll();
     }
 }

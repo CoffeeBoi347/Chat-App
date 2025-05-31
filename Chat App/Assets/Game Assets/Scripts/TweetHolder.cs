@@ -14,6 +14,11 @@ public class TweetHolder : MonoBehaviour
 
     private void Start()
     {
+        foreach(Transform child in msgParent.transform)
+        {
+            Destroy(child.gameObject);
+        }
+
         followersTxt.text = $"{followers} Followers";
         LoadTweets();
         playerNameTxt.text = GameManager.instance.playerName;
@@ -34,6 +39,9 @@ public class TweetHolder : MonoBehaviour
 
         foreach (var msg in messages)
         {
+            int tweetID = Random.Range(0, 9999);
+            string tweetID_ = tweetID.ToString() + "_id";
+            PlayerPrefs.SetString("TweetID", tweetID_);
             GameObject msgBox = Instantiate(msgObj, msgParent.transform);
             var getTxt = msgBox.GetComponentsInChildren<TMP_Text>();
             TMP_Text nameTxt = getTxt[0];

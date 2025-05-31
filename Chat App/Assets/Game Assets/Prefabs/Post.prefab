@@ -425,6 +425,7 @@ MonoBehaviour:
   likesCount: 0
   dislikeCount: 0
   heartButton: {fileID: 21300000, guid: 7460572b76a8bb34aa291871da4e2bdc, type: 3}
+  heartBreakButton: {fileID: 21300000, guid: 8b1a75e4478eb5c4fb318a1c1f881058, type: 3}
   _dislikeButton: {fileID: 8318220275148681196}
 --- !u!1 &5825624999045841667
 GameObject:

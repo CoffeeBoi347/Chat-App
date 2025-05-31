@@ -368,6 +368,10 @@ PrefabInstance:
       propertyPath: _dislikeButton
       value: 
       objectReference: {fileID: 3961622747600330587}
+    - target: {fileID: 599542278023874403, guid: b280c4dad7b9df04e8c8f4616cb34ef4, type: 3}
+      propertyPath: heartBreakButton
+      value: 
+      objectReference: {fileID: 21300000, guid: 8b1a75e4478eb5c4fb318a1c1f881058, type: 3}
     - target: {fileID: 3705569017816056623, guid: b280c4dad7b9df04e8c8f4616cb34ef4, type: 3}
       propertyPath: m_margin.z
       value: 134.9563

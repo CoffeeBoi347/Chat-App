@@ -19,10 +19,14 @@ public class ProfileView : MonoBehaviour
 
     public GameObject firstMsgObj;
 
+    private string playerNameHolder;
+    private string messageHolder;
+
     private void Awake()
     {
         instance = this;
     }
+
     public void UpdateText(string playerName, string playerMessage)
     {
         followers = Random.Range(0, 9999);
@@ -34,13 +38,13 @@ public class ProfileView : MonoBehaviour
         TMP_Text playerNameVal = findTxt[0];
         TMP_Text playerMsg = findTxt[1];
 
-        playerNameVal.text = playerName;
+        playerNameVal.text = playerLoad;
         playerMsg.text = playerMessage;
 
-        InstantiateMessages();
+        InstantiateMessages(playerNameVal.text);
     }
 
-    public void InstantiateMessages()
+    public void InstantiateMessages(string playerName_)
     {
         for(int i = 0; i < 10; i++)
         {
@@ -52,7 +56,7 @@ public class ProfileView : MonoBehaviour
             TMP_Text playerName = msgBoxBreak[0];
             TMP_Text messageHold = msgBoxBreak[1];
 
-            playerName.text = playerLoad;
+            playerName.text = playerName_;
             messageHold.text = messageToShow;
         }
     }
