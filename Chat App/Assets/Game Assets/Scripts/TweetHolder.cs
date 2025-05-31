@@ -6,20 +6,28 @@ public class TweetHolder : MonoBehaviour
 {
     public List<string> messages = new List<string>();
     public TMP_Text playerNameTxt;
+    public TMP_Text followersTxt;
     public Transform msgParent;
     public GameObject msgObj;
+    public int followers;
     public bool canInstantiate = false;
 
     private void Start()
     {
+        followersTxt.text = $"{followers} Followers";
+        LoadTweets();
         playerNameTxt.text = GameManager.instance.playerName;
     }
 
     public void DisplayTweets(string messageVal)
     {
-        messages.Insert(0, messageVal);
+        if (!string.IsNullOrEmpty(messageVal))
+        {
+            messages.Insert(0, messageVal);
+            SaveMessages();
+        }
 
-        foreach(Transform obj in msgParent)
+        foreach (Transform obj in msgParent)
         {
             Destroy(obj.gameObject);
         }
@@ -33,5 +41,19 @@ public class TweetHolder : MonoBehaviour
             nameTxt.text = GameManager.instance.playerName;
             messageTxt.text = msg;
         }
+    }
+
+    void SaveMessages()
+    {
+        string msg = string.Join("|", messages);
+        PlayerPrefs.SetString("SaveTweets", msg);
+        PlayerPrefs.Save();
+    }
+
+    void LoadTweets()
+    {
+        var accessPlayerData = PlayerPrefs.GetString("SaveTweets");
+        messages = new List<string>(accessPlayerData.Split("|"));
+        DisplayTweets("");
     }
 }

@@ -21,7 +21,7 @@ public class PostCreate : MonoBehaviour
         messageToPost = string.Empty;
         inpField.text = string.Empty;
         if (tweetHolder == null)
-        {
+        { 
             tweetHolder = FindObjectOfType<TweetHolder>();
         }
 

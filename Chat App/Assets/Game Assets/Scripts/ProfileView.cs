@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ProfileView : MonoBehaviour
 {
+    public TMP_Text followersTxt;
+    public int followers;
     public List<string> randomMessages = new List<string>();
     public HomePage pageHome;
     public static ProfileView instance;
@@ -23,6 +25,8 @@ public class ProfileView : MonoBehaviour
     }
     public void UpdateText(string playerName, string playerMessage)
     {
+        followers = Random.Range(0, 9999);
+        followersTxt.text = $"Followers: {followers}";
         playerLoad = playerName;
         viewPlayerName.text = playerName;
 
@@ -40,7 +44,7 @@ public class ProfileView : MonoBehaviour
     {
         for(int i = 0; i < 10; i++)
         {
-            int messagesToShowIndx = Random.Range(0, 15);
+            int messagesToShowIndx = Random.Range(0, 25);
             string messageToShow = pageHome.randomMessages[messagesToShowIndx];
 
             GameObject msgBox = Instantiate(messageBoxObj, messageBoxParent.transform);
