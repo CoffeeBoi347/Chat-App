@@ -4,13 +4,17 @@ using UnityEngine.UI;
 
 public class LikeButton : MonoBehaviour
 {
+    public string tweetID;
+    public string tweetIDNo;
     public bool setRandomNumber = false;
     public Button _likeButton;
     public TMP_Text likesTxt;
     public TMP_Text dislikesTxt;
+    public int getLikesCount;
+    public int getDislikesCount;
     public int likesCount;
     public int dislikeCount;
-
+    public Sprite heartButton;
     public Button _dislikeButton;
 
     private void Start()
@@ -32,11 +36,12 @@ public class LikeButton : MonoBehaviour
 
     void IncreaseLikes()
     {
+        _likeButton.gameObject.GetComponent<Image>().sprite = heartButton;
         likesCount++;
         PlayerPrefs.SetInt("LikesVal", likesCount);
         PlayerPrefs.Save();
 
-        var getLikesCount = PlayerPrefs.GetInt("LikesVal");
+        getLikesCount = PlayerPrefs.GetInt("LikesVal");
         likesTxt.text = getLikesCount.ToString();
         _likeButton.interactable = false;
     }
@@ -47,7 +52,7 @@ public class LikeButton : MonoBehaviour
         PlayerPrefs.SetInt("DislikeVal", dislikeCount);
         PlayerPrefs.Save();
 
-        var getDislikesCount = PlayerPrefs.GetInt("DislikeVal");
+        getDislikesCount = PlayerPrefs.GetInt("DislikeVal");
         dislikesTxt.text = getDislikesCount.ToString();
         _dislikeButton.interactable = false;
     }

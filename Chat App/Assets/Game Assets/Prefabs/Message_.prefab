@@ -167,6 +167,7 @@ RectTransform:
   - {fileID: 2286568956645703481}
   - {fileID: 8249893851422628485}
   - {fileID: 5683754754335599903}
+  - {fileID: 5028048852204214702}
   - {fileID: 983966837611464268}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -439,6 +440,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dislikes
       objectReference: {fileID: 0}
+    - target: {fileID: 4874646073376558983, guid: 1146358c846cbd3469299a193e3b527b, type: 3}
+      propertyPath: m_margin.z
+      value: 119.28824
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -484,9 +489,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6209202588659803320}
     - target: {fileID: 599542278023874403, guid: b280c4dad7b9df04e8c8f4616cb34ef4, type: 3}
+      propertyPath: heartButton
+      value: 
+      objectReference: {fileID: 21300000, guid: 7460572b76a8bb34aa291871da4e2bdc, type: 3}
+    - target: {fileID: 599542278023874403, guid: b280c4dad7b9df04e8c8f4616cb34ef4, type: 3}
       propertyPath: _dislikeButton
       value: 
       objectReference: {fileID: 7930393299576784072}
+    - target: {fileID: 3705569017816056623, guid: b280c4dad7b9df04e8c8f4616cb34ef4, type: 3}
+      propertyPath: m_margin.z
+      value: 133.38887
+      objectReference: {fileID: 0}
     - target: {fileID: 4952034967598808640, guid: b280c4dad7b9df04e8c8f4616cb34ef4, type: 3}
       propertyPath: m_Name
       value: Likes
@@ -580,4 +593,118 @@ PrefabInstance:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7557206308030964187, guid: b280c4dad7b9df04e8c8f4616cb34ef4, type: 3}
   m_PrefabInstance: {fileID: 2738285112463101124}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5538116646985689859
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 697506176467756709}
+    m_Modifications:
+    - target: {fileID: 656505701731087021, guid: 5ba13783a5cf8e44b94e40092ff8c74c, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 656505701731087021, guid: 5ba13783a5cf8e44b94e40092ff8c74c, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 656505701731087021, guid: 5ba13783a5cf8e44b94e40092ff8c74c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 656505701731087021, guid: 5ba13783a5cf8e44b94e40092ff8c74c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 656505701731087021, guid: 5ba13783a5cf8e44b94e40092ff8c74c, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 656505701731087021, guid: 5ba13783a5cf8e44b94e40092ff8c74c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 656505701731087021, guid: 5ba13783a5cf8e44b94e40092ff8c74c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 656505701731087021, guid: 5ba13783a5cf8e44b94e40092ff8c74c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 656505701731087021, guid: 5ba13783a5cf8e44b94e40092ff8c74c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 656505701731087021, guid: 5ba13783a5cf8e44b94e40092ff8c74c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 656505701731087021, guid: 5ba13783a5cf8e44b94e40092ff8c74c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 656505701731087021, guid: 5ba13783a5cf8e44b94e40092ff8c74c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 656505701731087021, guid: 5ba13783a5cf8e44b94e40092ff8c74c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 656505701731087021, guid: 5ba13783a5cf8e44b94e40092ff8c74c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 656505701731087021, guid: 5ba13783a5cf8e44b94e40092ff8c74c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 656505701731087021, guid: 5ba13783a5cf8e44b94e40092ff8c74c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 221.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 656505701731087021, guid: 5ba13783a5cf8e44b94e40092ff8c74c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 656505701731087021, guid: 5ba13783a5cf8e44b94e40092ff8c74c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 656505701731087021, guid: 5ba13783a5cf8e44b94e40092ff8c74c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 656505701731087021, guid: 5ba13783a5cf8e44b94e40092ff8c74c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225416868645575443, guid: 5ba13783a5cf8e44b94e40092ff8c74c, type: 3}
+      propertyPath: allowedToChangeVal
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2685797931327417654, guid: 5ba13783a5cf8e44b94e40092ff8c74c, type: 3}
+      propertyPath: m_Name
+      value: ChatBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 7615296610922451989, guid: 5ba13783a5cf8e44b94e40092ff8c74c, type: 3}
+      propertyPath: dislikesTxt
+      value: 
+      objectReference: {fileID: 6209202588659803320}
+    - target: {fileID: 7615296610922451989, guid: 5ba13783a5cf8e44b94e40092ff8c74c, type: 3}
+      propertyPath: _dislikeButton
+      value: 
+      objectReference: {fileID: 7930393299576784072}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5ba13783a5cf8e44b94e40092ff8c74c, type: 3}
+--- !u!224 &5028048852204214702 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 656505701731087021, guid: 5ba13783a5cf8e44b94e40092ff8c74c, type: 3}
+  m_PrefabInstance: {fileID: 5538116646985689859}
   m_PrefabAsset: {fileID: 0}
