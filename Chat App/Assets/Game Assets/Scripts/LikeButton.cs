@@ -1,5 +1,4 @@
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -31,10 +30,10 @@ public class LikeButton : MonoBehaviour
             dislikesTxt.text = dislikeCount.ToString();
         }
 
-        if (!setRandomNumber)
+        if (setRandomNumber == false)
         {
-            likesCount = PlayerPrefs.GetInt($"Like_{tweetID}");
-            dislikeCount = PlayerPrefs.GetInt($"Dislike_{tweetID}");
+            likesCount = PlayerPrefs.GetInt($"Like_");
+            dislikeCount = PlayerPrefs.GetInt($"Dislike_");
 
             likesTxt.text = likesCount.ToString();
             dislikesTxt.text = dislikeCount.ToString();
@@ -52,7 +51,7 @@ public class LikeButton : MonoBehaviour
         PlayerPrefs.SetInt($"Like_{tweetID}", likesCount);
         PlayerPrefs.Save();
 
-        getLikesCount = PlayerPrefs.GetInt($"Like_{tweetID}");
+        getLikesCount = PlayerPrefs.GetInt($"Like_");
         likesTxt.text = getLikesCount.ToString();
         _likeButton.interactable = false;
     }
@@ -65,7 +64,7 @@ public class LikeButton : MonoBehaviour
         PlayerPrefs.SetInt($"Dislike_{tweetID}", dislikeCount);
         PlayerPrefs.Save();
 
-        getDislikesCount = PlayerPrefs.GetInt($"Dislike_{tweetID}");
+        getDislikesCount = PlayerPrefs.GetInt($"Dislike_");
         dislikesTxt.text = getDislikesCount.ToString();
         _dislikeButton.interactable = false;
     }

@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public Button musicButton;
     public Button quitButton;
     public Button deleteDataButton;
+    public bool deletePlayerPrefs = false;
     private void Awake()
     {
         if(instance == null)
@@ -33,6 +34,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        DeletePlayerPrefs();
         if (!PlayerPrefs.HasKey("PlayerName"))
         {
             OpenMenu(6);
@@ -52,8 +54,17 @@ public class GameManager : MonoBehaviour
         deleteDataButton.onClick.AddListener(OnDeleteData);
     }
 
+    void DeletePlayerPrefs()
+    {
+        if (deletePlayerPrefs)
+        {
+            PlayerPrefs.DeleteAll();
+        }
+    }
+
     public void OpenMenu(int index)
     {
+        playerName = PlayerPrefs.GetString("PlayerName");
         for (int i = 0; i < panels.Count; i++)
         {
             var obj = panels[i].GetComponent<CanvasGroup>();
