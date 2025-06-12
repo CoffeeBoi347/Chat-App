@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using TMPro;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -63,15 +64,15 @@ public class HomePage : MonoBehaviour
     private void Start()
     {
         ClickButton();
+        viewProfile = FindObjectOfType<ProfileView>();
     }
 
     public void ClickButton()
     {
-        homeButton.onClick.AddListener(GenerateRandomMessages);
-
+        homeButton.onClick.AddListener(() => StartCoroutine(GenerateRandomMessages()));
     }
 
-    void GenerateRandomMessages()
+    IEnumerator GenerateRandomMessages()
     {
         for (int i = 0; i < randomMessages.Count; i++)
         {
@@ -87,9 +88,9 @@ public class HomePage : MonoBehaviour
 
             var spawnChild = spawnObj.GetComponentInChildren<ButtonHandler>();
             spawnChild.viewProfile_ = viewProfile;
-            viewProfile = FindObjectOfType<ProfileView>();
-
         }
+
+        yield break; // do nothing, not even wait for the frame
     }
 
 }

@@ -28,6 +28,9 @@ public class ProfileView : MonoBehaviour
     }
 
     public void UpdateText(string playerName, string playerMessage)
+        // while vieweing profiles, the first thing we are doing is we are UPDATING the text values. 
+        // we are working with DUMMY DATA. so based on the player's name which we clicked on home page, we access that text
+        // and respectively we access their TMP_Text from the children. 
     {
         followers = Random.Range(0, 9999);
         followersTxt.text = $"Followers: {followers}";
